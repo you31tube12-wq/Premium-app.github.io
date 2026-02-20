@@ -1,0 +1,150 @@
+/* --- ការកំណត់ទូទៅ --- */
+:root {
+    --primary: #00a8ff;
+    --success: #2ecc71;
+    --bg: #f8f9fb;
+    --white: #ffffff;
+    --text: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanuman', serif;
+    background: linear-gradient(180deg, #e1f5fe 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: var(--text);
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+/* --- បញ្ជីសេវាកម្មទំព័រមុខ (Main Menu) --- */
+.item-card {
+    background: var(--white);
+    padding: 20px 10px;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 168, 255, 0.1);
+}
+
+/* កំណត់ទំហំ Logo ឱ្យស្អាតជានិច្ច */
+.item-card img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* --- ផ្ទាំង Detail (ពេលចុចទិញ) --- */
+.detail-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 35px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.logo-circle {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* --- ប៊ូតុង និង Input --- */
+input {
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.1);
+}
+
+.price-item {
+    padding: 15px;
+    border: 1.5px solid #f1f2f6;
+    border-radius: 18px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.price-item.selected {
+    border-color: var(--primary);
+    background: #e1f5fe;
+    color: var(--primary);
+    font-weight: bold;
+    transform: scale(1.03);
+}
+
+.buy-now-btn {
+    box-shadow: 0 8px 20px rgba(0, 168, 255, 0.3);
+    transition: 0.3s;
+}
+
+.buy-now-btn:active {
+    transform: scale(0.95);
+}
+
+/* --- Admin Panel --- */
+.admin-inputs input {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* --- ជំនួយការបណ្តែត (Telegram) --- */
+.float-help {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #0088cc;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.float-help img {
+    width: 25px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-menu, .detail-section {
+    animation: fadeIn 0.4s ease-out;
+}
+
